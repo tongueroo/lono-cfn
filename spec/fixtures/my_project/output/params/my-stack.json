@@ -1,0 +1,12 @@
+[
+  {
+    "ParameterKey": "Param1",
+    "ParameterValue": "1",
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "Param2",
+    "ParameterValue": "1",
+    "UsePreviousValue": null
+  }
+]
