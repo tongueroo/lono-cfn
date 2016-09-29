@@ -12,7 +12,7 @@ The above command:
 2. Generate a parameters file from the params/my-params.txt.
 3. Launch the CloudFormation stack with those parameters.
 
-This tool is meant to be used in conjuction with lono but can also be used separately with the `--no-lono` flag, which skips the `lono generate` call.
+This tool is meant to be used in conjuction with [lono](https://github.com/tongueroo/lono) but can also be used separately with the `--no-lono` flag, which skips the `lono generate` call.
 
 ## Installation
 
@@ -36,13 +36,13 @@ Provided that you are in a lono project and have a `my-stack` lono template defi
 $ lono-cfn create my-stack
 ```
 
-The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  The template defaults by convention to the name of the stack.  The params defaults by convention to the name of the template in turn.  The convention allows the command to be a very nice short command that can be easily remembered.  Both conventions can be overridden.
+The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  The template defaults by convention to the name of the stack.  The params defaults by convention to the name of the template in turn.  The conventions allows the command to be a very nice short command that can be easily remembered.  Both conventions can be overridden.
 
 ## More About Conventions
 
 * stack - This is a required parameter and is the passed in from the CLI as the first parameter.
-* template - By convention matches the stack name but can be overriden with --template
-* params = By convention matches the template name but can be overriden with --params
+* template - By convention matches the stack name but can be overriden with `--template`.
+* params = By convention matches the template name but can be overriden with `--params`.
 
 Here are examples of overriding the template and params name conventions.
 
