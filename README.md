@@ -2,6 +2,8 @@
 
 Wrapper cfn tool to quickly create CloudFormation stacks from lono templates and params files.  
 
+This project is a WiP as only the create command is available right now.
+
 ```bash
 $ bundle exec lono-cfn create my-stack-$(date +%s) --template my-template --params my-params
 ```
