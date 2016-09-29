@@ -1,6 +1,5 @@
-# hack require until I gemify lono-params
-puts "REMEMBER TO PACKAGE LONO-PARAMS AS GEM"
 require "lono"
+require "lono-params"
 require "aws-sdk"
 
 module LonoCfn
@@ -9,26 +8,22 @@ module LonoCfn
       @stack_name = stack_name
       @options = options
       @project_root = options[:project_root] || '.'
-      @template_path = get_source_path(options[:template], :template)
-      @params_path = get_source_path(options[:params], :params)
+
+      template_name = options[:template] || @stack_name
+      params_name = options[:params] || template_name
+      @template_path = get_source_path(template_name, :template)
+      @params_path = get_source_path(params_name, :params)
+      puts "Using template: #{@template_path}"
+      puts "Using parameters: #{@params_path}"
+
       @region = options[:region] || 'us-east-1'
     end
 
     def run
-      check_for_errors
       generate_templates if @options[:lono]
+      check_for_errors
       params = generate_params
-      puts "Using template: #{@template_path}"
-      puts "Using parameters: #{@params_path}"
       create_stack(params)
-    end
-
-    def generate_params
-      generator = LonoParams::Generator.new(@stack_name,
-        project_root: @project_root,
-        path: @params_path)
-      generator.generate  # Writes the json file in CamelCase keys format
-      generator.params    # Returns Array in underscore keys format
     end
 
     def generate_templates
@@ -36,6 +31,15 @@ module LonoCfn
           project_root: @project_root,
           pretty: true
         ).run
+    end
+
+    def generate_params
+      generator = LonoParams::Generator.new(@stack_name,
+        project_root: @project_root,
+        path: @params_path,
+        allow_blank: true)
+      generator.generate  # Writes the json file in CamelCase keys format
+      generator.params    # Returns Array in underscore keys format
     end
 
     # aws cloudformation create-stack --stack-name cluster-hi \
@@ -73,10 +77,10 @@ module LonoCfn
     def check_files
       errors = []
       unless File.exist?(@template_path)
-        errors << "Template file missing: could not find output/#{@template_path}.json"
+        errors << "Template file missing: could not find #{@template_path}"
       end
-      unless File.exist?(@params_path)
-        errors << "Parameters file missing: could not find params/#{@params_path}.txt"
+      if @options[:params] && !File.exist?(@params_path)
+        errors << "Parameters file missing: could not find #{@params_path}"
       end
       errors
     end
@@ -88,11 +92,10 @@ module LonoCfn
     # Type - :params or :template
     def get_source_path(path, type)
       default_convention_path = convention_path(@stack_name, type)
-      return default_convention_path if path.nil?
 
+      return default_convention_path if path.nil?
       # convention path based on the input from the user
-      convention_path = convention_path(path, type)
-      File.exist?(convention_path) ? convention_path : path
+      convention_path(path, type)
     end
 
     def convention_path(name, type)
