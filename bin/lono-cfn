@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.expand_path('../../lib', __FILE__))
+require 'lono-cfn'
+require 'lono_cfn/cli'
+
+LonoCfn::CLI.start(ARGV)

@@ -1,0 +1,4147 @@
+[
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AWSTemplateFormatVersion\": \"2010-09-09\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Conditions\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateEC2LCWithKeyPair\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Not\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"KeyName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateEC2LCWithoutKeyPair\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"KeyName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateELB\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Or\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateELBForExistingVpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateELBForNewVpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateELBForExistingVpc\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::And\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"CreateElasticLoadBalancer\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"true\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"ExistingVpcResources\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateELBForNewVpc\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::And\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"CreateElasticLoadBalancer\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"true\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateVpcResources\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"VpcId\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ExistingVpcResources\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Not\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"VpcId\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SetEndpointToECSAgent\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Not\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsEndpoint\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"UseSpecifiedVpcAvailabilityZones\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Not\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Equals\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Join\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"VpcAvailabilityZones\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"AWS CloudFormation template to create a new VPC or use an existing VPC for ECS deployment\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Mappings\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcCidrs\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ap-northeast-1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ap-southeast-1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ap-southeast-2\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"eu-central-1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"eu-west-1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"sa-east-1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"us-east-1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"us-west-1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"us-west-2\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\": \"10.0.0.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\": \"10.0.1.0/24\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\": \"10.0.0.0/16\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Outputs\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsElbName\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Load Balancer for ECS Service\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Value\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateELB\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateELBForNewVpc\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsElasticLoadBalancer\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsElasticLoadBalancerExistingVpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsInstanceAsgName\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Auto Scaling Group Name for ECS Instances\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Value\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsInstanceAsg\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Parameters\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AsgMaxSize\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"1\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Maximum size and initial Desired Capacity of ECS Auto Scaling Group\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"Number\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateElasticLoadBalancer\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"false\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional : When set to true, creates a ELB for ECS Service\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsAmiId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"ECS AMI Id\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsClusterName\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"default\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"ECS Cluster Name\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsEndpoint\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional : ECS Endpoint for the ECS Agent to connect to\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsInstanceType\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AllowedValues\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"t2.micro\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"t2.small\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"t2.medium\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"t2.large\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m4.large\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m4.xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m4.2xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m4.4xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m4.10xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m3.medium\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m3.large\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m3.xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"m3.2xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c4.large\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c4.xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c4.2xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c4.4xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c4.8xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c3.large\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c3.xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c3.2xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c3.4xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"c3.8xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"r3.large\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"r3.xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"r3.2xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"r3.4xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"r3.8xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"i2.xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"i2.2xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"i2.4xlarge\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"i2.8xlarge\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ConstraintDescription\": \"must be a valid EC2 instance type.\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"t2.micro\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"ECS EC2 instance type\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"80\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - Security Group port to open on ECS instances - defaults to port 80\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ElbHealthCheckTarget\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"HTTP:80/\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - Health Check Target for ELB - defaults to HTTP:80/\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ElbPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"80\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - Security Group port to open on ELB - port 80 will be open by default\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ElbProtocol\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"HTTP\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - ELB Protocol - defaults to HTTP\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"IamRoleInstanceProfile\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"KeyName\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - Name of an existing EC2 KeyPair to enable SSH access to the ECS instances\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SourceCidr\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"0.0.0.0/0\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - CIDR/IP range for EcsPort and ElbPort - defaults to 0.0.0.0/0\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SubnetIds\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - Comma separated list of existing VPC Subnet Ids where ECS instances will run\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"CommaDelimitedList\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcAvailabilityZones\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional : Comma-delimited list of two VPC availability zones in which to create subnets\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"CommaDelimitedList\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AllowedPattern\": \"^(?:vpc-[0-9a-f]{8}|)$\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ConstraintDescription\": \"VPC Id must begin with 'vpc-' or leave blank to have a new VPC created\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Default\": \"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Description\": \"Optional - VPC Id of existing VPC. Leave blank to have a new VPC created\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"String\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Resources\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AttachGateway\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"InternetGatewayId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"InternetGateway\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"Vpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::VPCGatewayAttachment\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsElasticLoadBalancer\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateELBForNewVpc\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CrossZone\": \"true\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"HealthCheck\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"HealthyThreshold\": \"2\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Interval\": \"30\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Target\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbHealthCheckTarget\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Timeout\": \"5\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"UnhealthyThreshold\": \"10\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Listeners\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"InstancePort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"LoadBalancerPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Protocol\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbProtocol\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SecurityGroups\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbSecurityGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Subnets\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"PubSubnetAz1\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"PubSubnetAz2\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::ElasticLoadBalancing::LoadBalancer\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsElasticLoadBalancerExistingVpc\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateELBForExistingVpc\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CrossZone\": \"true\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"HealthCheck\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"HealthyThreshold\": \"2\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Interval\": \"30\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Target\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbHealthCheckTarget\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Timeout\": \"5\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"UnhealthyThreshold\": \"10\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Listeners\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"InstancePort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"LoadBalancerPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Protocol\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbProtocol\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SecurityGroups\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbSecurityGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Subnets\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"SubnetIds\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::ElasticLoadBalancing::LoadBalancer\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsInstanceAsg\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"DesiredCapacity\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AsgMaxSize\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"LaunchConfigurationName\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateEC2LCWithKeyPair\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsInstanceLc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsInstanceLcWithoutKeyPair\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"MaxSize\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AsgMaxSize\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"MinSize\": \"1\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Tags\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Key\": \"Name\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"PropagateAtLaunch\": \"true\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Value\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Join\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ECS Instance - \",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AWS::StackName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VPCZoneIdentifier\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Join\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\",\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"PubSubnetAz1\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"PubSubnetAz2\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"SubnetIds\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::AutoScaling::AutoScalingGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsInstanceLc\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateEC2LCWithKeyPair\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AssociatePublicIpAddress\": true,",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"IamInstanceProfile\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"IamRoleInstanceProfile\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ImageId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsAmiId\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"InstanceType\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsInstanceType\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"KeyName\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"KeyName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SecurityGroups\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsSecurityGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"UserData\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SetEndpointToECSAgent\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Base64\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Join\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"#!/bin/bash\\n\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"echo ECS_CLUSTER",
+    "ParameterValue": "\",",
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsClusterName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\" >> /etc/ecs/ecs.config\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\\necho ECS_BACKEND_HOST",
+    "ParameterValue": "\",",
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsEndpoint\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\" >> /etc/ecs/ecs.config\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Base64\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Join\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"#!/bin/bash\\n\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"echo ECS_CLUSTER",
+    "ParameterValue": "\",",
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsClusterName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\" >> /etc/ecs/ecs.config\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::AutoScaling::LaunchConfiguration\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsInstanceLcWithoutKeyPair\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateEC2LCWithoutKeyPair\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AssociatePublicIpAddress\": true,",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"IamInstanceProfile\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"IamRoleInstanceProfile\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ImageId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsAmiId\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"InstanceType\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsInstanceType\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SecurityGroups\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsSecurityGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"UserData\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SetEndpointToECSAgent\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Base64\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Join\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"#!/bin/bash\\n\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"echo ECS_CLUSTER",
+    "ParameterValue": "\",",
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsClusterName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\" >> /etc/ecs/ecs.config\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\\necho ECS_BACKEND_HOST",
+    "ParameterValue": "\",",
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsEndpoint\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\" >> /etc/ecs/ecs.config\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Base64\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Join\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"#!/bin/bash\\n\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"echo ECS_CLUSTER",
+    "ParameterValue": "\",",
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsClusterName\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\" >> /etc/ecs/ecs.config\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::AutoScaling::LaunchConfiguration\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EcsSecurityGroup\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"GroupDescription\": \"ECS Allowed Ports\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SecurityGroupIngress\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateELB\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CidrIp\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"SourceCidr\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"FromPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"IpProtocol\": \"tcp\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ToPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"FromPort\": \"1\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"IpProtocol\": \"tcp\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SourceSecurityGroupId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbSecurityGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ToPort\": \"65535\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "[",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CidrIp\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"SourceCidr\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"FromPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"IpProtocol\": \"tcp\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ToPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"EcsPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"Vpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"VpcId\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::SecurityGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ElbSecurityGroup\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"GroupDescription\": \"ELB Allowed Ports\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SecurityGroupIngress\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CidrIp\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"SourceCidr\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"FromPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"IpProtocol\": \"tcp\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"ToPort\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"ElbPort\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "],",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"Vpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"VpcId\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::SecurityGroup\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"InternetGateway\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::InternetGateway\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"PubSubnet1RouteTableAssociation\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"RouteTableId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"RouteViaIgw\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SubnetId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"PubSubnetAz1\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::SubnetRouteTableAssociation\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"PubSubnet2RouteTableAssociation\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"RouteTableId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"RouteViaIgw\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"SubnetId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"PubSubnetAz2\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::SubnetRouteTableAssociation\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"PubSubnetAz1\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AvailabilityZone\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"UseSpecifiedVpcAvailabilityZones\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Select\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"0\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"VpcAvailabilityZones\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Select\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"0\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::GetAZs\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AWS::Region\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CidrBlock\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::FindInMap\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcCidrs\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AWS::Region\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet1\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"Vpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::Subnet\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"PubSubnetAz2\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"AvailabilityZone\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::If\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"UseSpecifiedVpcAvailabilityZones\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Select\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"1\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"VpcAvailabilityZones\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::Select\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"1\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::GetAZs\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AWS::Region\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CidrBlock\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::FindInMap\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcCidrs\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AWS::Region\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"pubsubnet2\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"Vpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::Subnet\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"PublicRouteViaIgw\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"DependsOn\": \"AttachGateway\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"DestinationCidrBlock\": \"0.0.0.0/0\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"GatewayId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"InternetGateway\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"RouteTableId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"RouteViaIgw\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::Route\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"RouteViaIgw\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcId\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"Vpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::RouteTable\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Vpc\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Condition\": \"CreateVpcResources\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Properties\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"CidrBlock\": {",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Fn::FindInMap\": [",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"VpcCidrs\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "{",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Ref\": \"AWS::Region\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"vpc\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "]",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EnableDnsHostnames\": \"true\",",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"EnableDnsSupport\": \"true\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "},",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "\"Type\": \"AWS::EC2::VPC\"",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  },
+  {
+    "ParameterKey": "}",
+    "ParameterValue": null,
+    "UsePreviousValue": null
+  }
+]
