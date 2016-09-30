@@ -37,14 +37,13 @@ module LonoCfn
       generator = LonoParams::Generator.new(@stack_name,
         project_root: @project_root,
         path: @params_path,
-        allow_blank: true)
+        use_previous_value: @options[:use_previous_value],
+        allow_no_file: true)
       generator.generate  # Writes the json file in CamelCase keys format
       generator.params    # Returns Array in underscore keys format
     end
 
-    # aws cloudformation create-stack --stack-name cluster-hi \
-    #   --template-body file://output/cluster-hi.json \
-    #   --parameters file://parameters/output/cluster-hi.json
+    # aws cloudformation create-stack --stack-name prod-hi-123456789 --parameters file://output/params/prod-hi-123456789.json --template-body file://output/prod-hi.json
     def create_stack(params)
       template_body = IO.read(@template_path)
       message = "#{@stack_name} stack created."

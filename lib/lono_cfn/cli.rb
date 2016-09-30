@@ -13,6 +13,7 @@ module LonoCfn
     option :template, desc: 'override convention and specify the template file to use'
     option :params, desc: 'override convention and specify the params file to use'
     option :lono, type: :boolean, desc: 'invoke lono to generate CloudFormation templates', default: true
+    option :use_previous_value, type: :boolean, default: true, desc: "On an update whether to use the previous parameters values.  Applies for all parameters."
     def create(name)
       Create.new(name, options).run
     end
