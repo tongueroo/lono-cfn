@@ -10,7 +10,7 @@ Provided that you are in a lono project and have a `my-stack` lono template defi
 
 $ lono-cfn create my-stack
 
-The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  The template defaults by convention to the name of the stack.  The params defaults by convention to the name of the template in turn.  The convention allows the command to be a very nice short command that can be easily remembered.  Both conventions can be overridden.
+The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  The template by convention defaults to the name of the stack.  In turn, the params by convention defaults to the name of the template.
 
 Here are examples of overriding the template and params name conventions.
 
@@ -37,7 +37,7 @@ Provided that you are in a lono project and have a `my-stack` lono template defi
 
 $ lono-cfn update my-stack
 
-The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  The template defaults by convention to the name of the stack.  The params defaults by convention to the name of the template in turn.  The convention allows the command to be a very nice short command that can be easily remembered.  Both conventions can be overridden.
+The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  The template by convention defaults to the name of the stack.  In turn, the params by convention defaults to the name of the template.
 
 Here are examples of overriding the template and params name conventions.
 

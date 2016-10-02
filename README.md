@@ -36,11 +36,11 @@ Provided that you are in a lono project and have a `my-stack` lono template defi
 $ lono-cfn create my-stack
 ```
 
-The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  
+The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.
 
 ### Conventions
 
-The template by convention defaults to the name of the stack.  In turn, the params by convention defaults to the name of the template in turn.
+The template by convention defaults to the name of the stack.  In turn, the params by convention defaults to the name of the template.
 
 * stack - This is a required parameter and is the CLI first parameter.
 * template - By convention matches the stack name but can be overriden with `--template`.
