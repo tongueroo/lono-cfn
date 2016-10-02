@@ -1,8 +1,6 @@
 # Lono Cfn
 
-Wrapper cfn tool to quickly create CloudFormation stacks from lono templates and params files.  
-
-This project is a WIP as only the create command is available right now.
+Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](https://github.com/tongueroo/lono) and [lono-params](https://github.com/tongueroo/lono-params) files.  Example:
 
 ```bash
 $ bundle exec lono-cfn create my-stack-$(date +%s) --template my-template --params my-params
@@ -14,7 +12,7 @@ The above command:
 2. Generate a parameters file from the params/my-params.txt.
 3. Launch the CloudFormation stack with those parameters.
 
-This tool is meant to be used in conjuction with [lono](https://github.com/tongueroo/lono) but can also be used separately with the `--no-lono` flag, which skips the `lono generate` call.
+This tool is meant to be used in conjuction with [lono](https://github.com/tongueroo/lono) but can also be used separately with the `--no-lono` flag, which skips the `lono generate` step.
 
 ## Installation
 
@@ -38,15 +36,32 @@ Provided that you are in a lono project and have a `my-stack` lono template defi
 $ lono-cfn create my-stack
 ```
 
-The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  The template defaults by convention to the name of the stack.  The params defaults by convention to the name of the template in turn.  The conventions allows the command to be a very nice short command that can be easily remembered.  Both conventions can be overridden.
+The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.  
 
-## More About Conventions
+### Conventions
 
-* stack - This is a required parameter and is the passed in from the CLI as the first parameter.
+The template by convention defaults to the name of the stack.  In turn, the params by convention defaults to the name of the template in turn.
+
+* stack - This is a required parameter and is the CLI first parameter.
 * template - By convention matches the stack name but can be overriden with `--template`.
-* params = By convention matches the template name but can be overriden with `--params`.
+* params - By convention matches the template name but can be overriden with `--params`.
 
-Here are examples of overriding the template and params name conventions.
+The conventions allows the command to be a very nice short command that can be easily remembered.  For example, these 2 commands are the same:
+
+Long form:
+
+```
+$ lono-cfn create my-stack --template my-stack --params --my-stack
+```
+
+Short form:
+
+```
+$ lono-cfn create my-stack
+```
+
+
+Both template and params conventions can be overridden.  Here are examples of overriding the template and params name conventions.
 
 ```
 $ lono-cfn create my-stack --template different-name1
