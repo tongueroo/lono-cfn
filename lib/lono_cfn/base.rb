@@ -66,6 +66,23 @@ module LonoCfn
       errors
     end
 
+    def stack_exists?
+      return if @options[:noop]
+
+      exist = true
+      begin
+        # When the stack does not exist an exception is raised. Example:
+        # Aws::CloudFormation::Errors::ValidationError: Stack with id blah does not exist
+        response = cfn.describe_stacks(stack_name: @stack_name)
+      rescue Aws::CloudFormation::Errors::ValidationError => e
+        e.message
+        if e.message =~ /Stack with/ || e.message =~ /does not exist/
+          exist = false
+        end
+      end
+      exist
+    end
+
     # if existing in params path then use that
     # if it doesnt assume it is a full path and check that
     # else fall back to convention, which also eventually gets checked in check_for_errors

@@ -7,6 +7,11 @@ module LonoCfn
 
     # aws cloudformation update-stack --stack-name prod-hi-123456789 --parameters file://output/params/prod-hi-123456789.json --template-body file://output/prod-hi.json
     def update_stack(params)
+      unless stack_exists?
+        puts "Cannot update a stack because the #{@stack_name} does not exists."
+        return
+      end
+
       template_body = IO.read(@template_path)
       message = "#{@stack_name} stack updating."
       if @options[:noop]

@@ -26,11 +26,5 @@ module LonoCfn
       end
       puts message unless @options[:mute]
     end
-
-    def stack_exists?
-      return if @options[:noop]
-      stack = cfn.describe_stacks(stack_name: @stack_name).stacks.first
-      !!stack
-    end
   end
 end
