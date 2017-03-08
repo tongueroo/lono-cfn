@@ -16,7 +16,7 @@ module LonoCfn
       puts "Using template: #{@template_path}"
       puts "Using parameters: #{@params_path}"
 
-      @region = options[:region] || 'us-east-1'
+      @region = ENV['AWS_REGION'] || options[:region] || 'us-east-1'
     end
 
     def run
