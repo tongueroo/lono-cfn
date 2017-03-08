@@ -37,7 +37,7 @@ module LonoCfn
       generator = LonoParams::Generator.new(@stack_name,
         project_root: @project_root,
         path: @params_path,
-        allow_no_file: true)
+        allow_no_file: false)
       generator.generate  # Writes the json file in CamelCase keys format
       generator.params    # Returns Array in underscore keys format
     end
