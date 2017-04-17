@@ -15,8 +15,6 @@ module LonoCfn
       @params_path = get_source_path(params_name, :params)
       puts "Using template: #{@template_path}"
       puts "Using parameters: #{@params_path}"
-
-      @region = ENV['AWS_REGION'] || options[:region] || 'us-east-1'
     end
 
     def run
@@ -43,7 +41,7 @@ module LonoCfn
     end
 
     def cfn
-      @cfn ||= Aws::CloudFormation::Client.new(region: @region)
+      @cfn ||= Aws::CloudFormation::Client.new
     end
 
     def check_for_errors
