@@ -14,17 +14,23 @@ module LonoCfn
 
       template_body = IO.read(@template_path)
       message = "#{@stack_name} stack updating."
+      error = nil
       if @options[:noop]
         message = "NOOP #{message}"
       else
-        cfn.update_stack(
-          stack_name: @stack_name,
-          template_body: template_body,
-          parameters: params#,
-          # capabilities: ["CAPABILITY_IAM"]
-        )
+        begin
+          cfn.update_stack(
+            stack_name: @stack_name,
+            template_body: template_body,
+            parameters: params#,
+            # capabilities: ["CAPABILITY_IAM"]
+          )
+        rescue Aws::CloudFormation::Errors::ValidationError => e
+          puts "ERROR: #{e.message}".red
+          error = true
+        end
       end
-      puts message unless @options[:mute]
+      puts message unless @options[:mute] || error
     end
   end
 end
