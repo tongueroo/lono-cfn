@@ -25,5 +25,11 @@ module LonoCfn
     def update(name)
       Update.new(name, options).run
     end
+
+    desc "delete STACK", "delete a CloudFormation stack"
+    long_desc Help.delete
+    def delete(name)
+      Delete.new(name, options).run
+    end
   end
 end

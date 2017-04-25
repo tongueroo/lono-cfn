@@ -20,5 +20,10 @@ describe LonoCfn::CLI do
       out = execute("bin/lono-cfn update my-stack #{@args}")
       expect(out).to include("stack updating.")
     end
+
+    it "deletes stack" do
+      out = execute("bin/lono-cfn delete my-stack #{@args}")
+      expect(out).to include("Deleted")
+    end
   end
 end

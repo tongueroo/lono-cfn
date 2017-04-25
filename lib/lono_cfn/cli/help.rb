@@ -55,6 +55,16 @@ The template that will be use is output/different-name3.json and the parameters 
 
 EOL
         end
+
+        def delete
+<<-EOL
+Examples:
+
+$ lono-cfn delete my-stack
+
+The above command will delete my-stack.
+EOL
+        end
       end
     end
   end

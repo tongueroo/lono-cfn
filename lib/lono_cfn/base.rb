@@ -1,9 +1,10 @@
 require "lono"
 require "lono-params"
-require "aws-sdk"
 
 module LonoCfn
   class Base
+    include AwsServices
+
     def initialize(stack_name, options={})
       @stack_name = stack_name
       @options = options
@@ -40,10 +41,6 @@ module LonoCfn
       generator.params    # Returns Array in underscore keys format
     end
 
-    def cfn
-      @cfn ||= Aws::CloudFormation::Client.new
-    end
-
     def check_for_errors
       errors = check_files
       unless errors.empty?
@@ -65,7 +62,8 @@ module LonoCfn
     end
 
     def stack_exists?
-      return if @options[:noop]
+      return true if testing_update?
+      return false if @options[:noop]
 
       exist = true
       begin
@@ -103,6 +101,10 @@ module LonoCfn
       else
         raise "hell: dont come here"
       end
+    end
+
+    def testing_update?
+      ENV['TEST'] && self.class.name == "LonoCfn::Update"
     end
   end
 end
