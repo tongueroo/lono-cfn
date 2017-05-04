@@ -4,12 +4,14 @@ Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](h
 
 ```bash
 $ bundle exec lono-cfn create my-stack-$(date +%s) --template my-template --params my-params
+$ bundle exec lono-cfn update my-stack-1493859659 --template my-template --params my-params
+$ bundle exec lono-cfn delete my-stack-1493859659
 ```
 
 The above command:
 
-1. Generates the lono templates defined in the lono config files.
-2. Generate a parameters file from the params/my-params.txt.
+1. Generates the lono templates defined in the lono `config` and `template` files.
+2. Generate a parameters file from the `params/my-params.txt`.
 3. Launch the CloudFormation stack with those parameters.
 
 This tool is meant to be used in conjuction with [lono](https://github.com/tongueroo/lono) but can also be used separately with the `--no-lono` flag, which skips the `lono generate` step.
@@ -36,7 +38,7 @@ Provided that you are in a lono project and have a `my-stack` lono template defi
 $ lono-cfn create my-stack
 ```
 
-The above command will generate and use the template in output/my-stack.json and parameters in params/my-stack.txt.
+The above command will generate and use the template in `output/my-stack.json` and parameters in `params/my-stack.txt`.
 
 ### Conventions
 
@@ -88,3 +90,9 @@ The template that will be use is output/different-name3.json and the parameters 
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Related Projects
+
+* [lono](https://github.com/tongueroo/lono) - Lono is a CloudFormation Template generator.  Lono generates CloudFormation templates based on ERB ruby templates.
+* [lono-params](https://github.com/tongueroo/lono-params) - Tool to generate a CloudFormation parameters json formatted file from a simplier env like file.
+
