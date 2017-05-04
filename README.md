@@ -1,5 +1,7 @@
 # Lono Cfn
 
+[![CircleCI](https://circleci.com/gh/tongueroo/lono-cfn.svg?style=svg)](https://circleci.com/gh/tongueroo/lono-cfn)
+
 Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](https://github.com/tongueroo/lono) and [lono-params](https://github.com/tongueroo/lono-params) files.  Example:
 
 ```bash
@@ -95,8 +97,8 @@ The template that will be use is output/different-name3.json and the parameters 
 
 ```bash
 $ git clone git@github.com:yourfork/lono-cfn.git
-$ git submodule init
-$ git submodule update
+$ git submodule sync
+$ git submodule update --init
 ```
 
 ## Related Projects
@@ -104,3 +106,4 @@ $ git submodule update
 * [lono](https://github.com/tongueroo/lono) - Lono is a CloudFormation Template generator.  Lono generates CloudFormation templates based on ERB ruby templates.
 * [lono-params](https://github.com/tongueroo/lono-params) - Tool to generate a CloudFormation parameters json formatted file from a simplier env like file.
 
+ith
