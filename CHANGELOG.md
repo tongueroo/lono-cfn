@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project *tries* to adhere to [Semantic Versioning](http://semver.org/), even before v1.0.
 
+## [0.0.6]
+
+-  allow missing params file
+
 ## [0.0.6] add delete stack command
 
 - add delete stack command

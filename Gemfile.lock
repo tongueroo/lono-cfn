@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lono-cfn (0.0.6)
+    lono-cfn (0.0.7)
       aws-sdk
       colorize
       hashie
@@ -20,13 +20,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    aws-sdk (2.9.11)
-      aws-sdk-resources (= 2.9.11)
-    aws-sdk-core (2.9.11)
+    aws-sdk (2.9.14)
+      aws-sdk-resources (= 2.9.14)
+    aws-sdk-core (2.9.14)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.9.11)
-      aws-sdk-core (= 2.9.11)
+    aws-sdk-resources (2.9.14)
+      aws-sdk-core (= 2.9.14)
     aws-sigv4 (1.0.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -79,7 +79,7 @@ GEM
       rake
       rb-fsevent
       thor
-    lono-params (0.0.4)
+    lono-params (0.0.5)
       colorize
       hashie
       plissken
