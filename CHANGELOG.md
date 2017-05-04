@@ -3,7 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project *tries* to adhere to [Semantic Versioning](http://semver.org/), even before v1.0.
 
-## [0.0.6]
+## [0.0.8]
+
+-  vendor/lono-params
+
+## [0.0.7]
 
 -  allow missing params file
 
