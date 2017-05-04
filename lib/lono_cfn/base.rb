@@ -36,29 +36,33 @@ module LonoCfn
       generator = LonoParams::Generator.new(@stack_name,
         project_root: @project_root,
         path: @params_path,
-        allow_no_file: false)
+        allow_no_file: true)
       generator.generate  # Writes the json file in CamelCase keys format
       generator.params    # Returns Array in underscore keys format
     end
 
     def check_for_errors
-      errors = check_files
+      errors, warns = check_files
       unless errors.empty?
         puts "Please double check the command you ran.  There were some errors."
-        puts "#{errors.join("\n")}"
+        puts "ERROR: #{errors.join("\n")}".colorize(:red)
         exit
+      end
+      unless errors.empty?
+        puts "Please double check the command you ran.  There were some warnings."
+        puts "WARN: #{errors.join("\n")}".colorize(:yellow)
       end
     end
 
     def check_files
-      errors = []
+      errors, warns = [], []
       unless File.exist?(@template_path)
         errors << "Template file missing: could not find #{@template_path}"
       end
       if @options[:params] && !File.exist?(@params_path)
-        errors << "Parameters file missing: could not find #{@params_path}"
+        warns << "Parameters file missing: could not find #{@params_path}"
       end
-      errors
+      [errors, warns]
     end
 
     def stack_exists?
@@ -95,11 +99,28 @@ module LonoCfn
     def convention_path(name, type)
       case type
       when :template
-        "#{@project_root}/output/#{name}.json"
+        format = detect_format
+        "#{@project_root}/output/#{name}.#{format}"
       when :params
         "#{@project_root}/params/#{name}.txt"
       else
         raise "hell: dont come here"
+      end
+    end
+
+    # Returns String with value of "yml" or "json".
+    def detect_format
+      formats = Dir.glob("#{@project_root}/output/**/*").map { |path| path }.
+                  reject { |s| s =~ %r{/params/} }. # reject output/params folder
+                  map { |path| File.extname(path) }.
+                  reject { |s| s.empty? }. # reject ""
+                  uniq
+      if formats.size > 1
+        puts "ERROR: Detected multiple formats: #{formats.join(", ")}".colorize(:red)
+        puts "All the output files must use the same format.  Either all json or all yml."
+        exit 1
+      else
+        formats.first.sub(/^\./,'')
       end
     end
 
