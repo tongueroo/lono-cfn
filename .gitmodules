@@ -1,0 +1,3 @@
+[submodule "vendor/lono-params"]
+	path = vendor/lono-params
+	url = git@github.com:tongueroo/lono-params.git

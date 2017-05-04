@@ -1,6 +1,9 @@
 $:.unshift(File.expand_path("../", __FILE__))
 require "lono_cfn/version"
-require "pp"
+
+# use vendored lono-params
+$:.unshift(File.expand_path("../../vendor/lono-params/lib", __FILE__))
+require "lono-params"
 
 module LonoCfn
   autoload :AwsServices, 'lono_cfn/aws_services'

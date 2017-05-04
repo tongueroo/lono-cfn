@@ -91,6 +91,14 @@ The template that will be use is output/different-name3.json and the parameters 
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## Developing
+
+```bash
+$ git clone git@github.com:yourfork/lono-cfn.git
+$ git submodule init
+$ git submodule update
+```
+
 ## Related Projects
 
 * [lono](https://github.com/tongueroo/lono) - Lono is a CloudFormation Template generator.  Lono generates CloudFormation templates based on ERB ruby templates.

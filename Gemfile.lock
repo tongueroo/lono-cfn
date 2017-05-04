@@ -6,7 +6,7 @@ PATH
       colorize
       hashie
       lono
-      lono-params
+      plissken
       thor
 
 GEM
@@ -78,11 +78,6 @@ GEM
       json
       rake
       rb-fsevent
-      thor
-    lono-params (0.0.5)
-      colorize
-      hashie
-      plissken
       thor
     lumberjack (1.0.10)
     method_source (0.8.2)
