@@ -13,9 +13,22 @@ module LonoCfn
       if @options[:noop]
         message = "NOOP #{message}"
       else
-        cfn.delete_stack(stack_name: @stack_name)
+        if stack_exist?
+          cfn.delete_stack(stack_name: @stack_name)
+          puts message
+        else
+          puts "#{@stack_name.inspect} stack does not exist".colorize(:red)
+        end
       end
-      puts message
+    end
+
+    def stack_exist?
+      begin
+        cfn.describe_stacks(stack_name: @stack_name)
+        true
+      rescue Aws::CloudFormation::Errors::ValidationError
+        false
+      end
     end
   end
 end
