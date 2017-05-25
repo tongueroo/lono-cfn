@@ -11,7 +11,7 @@ module LonoCfn
     def run
       message = "Deleted #{@stack_name}."
       if @options[:noop]
-        message = "NOOP #{message}"
+        puts "NOOP #{message}"
       else
         if stack_exist?
           cfn.delete_stack(stack_name: @stack_name)
