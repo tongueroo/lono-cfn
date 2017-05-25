@@ -32,11 +32,13 @@ module LonoCfn
         ).run
     end
 
-    def generate_params
-      generator = LonoParams::Generator.new(@stack_name,
+    def generate_params(options={})
+      generator_options = {
         project_root: @project_root,
         path: @params_path,
-        allow_no_file: true)
+        allow_no_file: true
+      }.merge(options)
+      generator = LonoParams::Generator.new(@stack_name, generator_options)
       generator.generate  # Writes the json file in CamelCase keys format
       generator.params    # Returns Array in underscore keys format
     end
@@ -65,24 +67,6 @@ module LonoCfn
       [errors, warns]
     end
 
-    def stack_exists?
-      return true if testing_update?
-      return false if @options[:noop]
-
-      exist = true
-      begin
-        # When the stack does not exist an exception is raised. Example:
-        # Aws::CloudFormation::Errors::ValidationError: Stack with id blah does not exist
-        response = cfn.describe_stacks(stack_name: @stack_name)
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        e.message
-        if e.message =~ /Stack with/ || e.message =~ /does not exist/
-          exist = false
-        end
-      end
-      exist
-    end
-
     # if existing in params path then use that
     # if it doesnt assume it is a full path and check that
     # else fall back to convention, which also eventually gets checked in check_for_errors
@@ -97,7 +81,7 @@ module LonoCfn
     end
 
     def convention_path(name, type)
-      case type
+      path = case type
       when :template
         format = detect_format
         "#{@project_root}/output/#{name}.#{format}"
@@ -106,6 +90,7 @@ module LonoCfn
       else
         raise "hell: dont come here"
       end
+      path.sub(/^\.\//, '')
     end
 
     # Returns String with value of "yml" or "json".
@@ -124,8 +109,29 @@ module LonoCfn
       end
     end
 
-    def testing_update?
-      ENV['TEST'] && self.class.name == "LonoCfn::Update"
+    # All CloudFormation states listed here:
+    # http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html
+    def stack_status(stack_name)
+      return true if testing_update?
+      return false if @options[:noop]
+
+      resp = cfn.describe_stacks(stack_name: stack_name)
+      status = resp.stacks[0].stack_status
+    end
+
+    def exist_unless_updatable(status)
+      return true if testing_update?
+      return false if @options[:noop]
+
+      unless status =~ /_COMPLETE$/
+        puts "Cannot create a change set for the stack because the #{@stack_name} is not in an updatable state.  Stack status: #{status}"
+        quit(1)
+      end
+    end
+
+    # To allow mocking in specs
+    def quit(signal)
+      exit signal
     end
   end
 end

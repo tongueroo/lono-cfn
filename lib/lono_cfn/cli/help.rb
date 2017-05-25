@@ -65,6 +65,22 @@ $ lono-cfn delete my-stack
 The above command will delete my-stack.
 EOL
         end
+
+        def plan
+<<-EOL
+Generates a CloudFormation plan.  This is similar to a `terraform plan` or puppet's dry-run mode.
+
+Example output:
+
+CloudFormation plan for 'example' stack update. Changes:
+
+Remove AWS::Route53::RecordSet: DnsRecord testsubdomain.sub.tongueroo.com
+
+Examples:
+
+$ lono-cfn plan my-stack
+EOL
+        end
       end
     end
   end
