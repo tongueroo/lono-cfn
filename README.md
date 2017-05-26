@@ -8,6 +8,7 @@ Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](h
 $ lono-cfn create my-stack-$(date +%s) --template my-template --params my-params
 $ lono-cfn update my-stack-1493859659 --template my-template --params my-params
 $ lono-cfn delete my-stack-1493859659
+$ lono-cfn plan my-stack-1493859659 --template template-name --params params-name
 ```
 
 The above command:
