@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lono-cfn (0.1.0)
+    lono-cfn (1.0.0)
       aws-sdk
       colorize
       hashie
