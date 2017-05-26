@@ -52,6 +52,8 @@ The template by convention defaults to the name of the stack.  In turn, the para
 
 The conventions allows the command to be a very nice short command that can be easily remembered.  For example, these 2 commands are the same:
 
+### lono-cfn create
+
 Long form:
 
 ```
@@ -84,6 +86,44 @@ $ lono-cfn create my-stack --template different-name3 --params different-name4
 ```
 
 The template that will be use is output/different-name3.json and the parameters will use params/different-name4.json.
+
+### lono-cfn update
+
+To update stacks you can use `lono-cfn update`:
+
+```
+$ lono-cfn update my-stack --template template-name --params params-name
+```
+
+By default the update command will display a preview of the stack changes before applying the update and prompt to check if you are sure.  If you want to bypass the are you sure prompt, use the `--sure` option.
+
+```
+$ lono-cfn update my-stack --template template-name --params params-name --sure
+```
+
+### lono-cfn delete
+
+```
+$ lono-cfn delete my-stack --sure
+```
+
+### lono-cfn plan
+
+If you want to see the CloudFormation plan without updating the stack you can also use the `lono-cfn plan` command.
+
+```
+$ lono-cfn plan example --template single_instance --params single_instance
+Using template: output/single_instance.yml
+Using parameters: params/single_instance.txt
+Generating CloudFormation templates:
+  ./output/single_instance.yml
+Params file generated for example at ./output/params/example.json
+Generating CloudFormation Change Set for plan.....
+CloudFormation plan for 'example' stack update. Changes:
+Remove AWS::Route53::RecordSet: DnsRecord testsubdomain.sub.tongueroo.com
+$
+```
+
 
 ## Contributing
 

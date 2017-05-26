@@ -9,9 +9,11 @@ require "lono-params"
 
 module LonoCfn
   autoload :AwsServices, 'lono_cfn/aws_services'
+  autoload :Util, 'lono_cfn/util'
   autoload :CLI, 'lono_cfn/cli'
   autoload :Base, 'lono_cfn/base'
   autoload :Create, 'lono_cfn/create'
   autoload :Update, 'lono_cfn/update'
   autoload :Delete, 'lono_cfn/delete'
+  autoload :Plan, 'lono_cfn/plan'
 end

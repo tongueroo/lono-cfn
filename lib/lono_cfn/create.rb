@@ -7,13 +7,13 @@ module LonoCfn
 
     # aws cloudformation create-stack --stack-name prod-hi-123456789 --parameters file://output/params/prod-hi-123456789.json --template-body file://output/prod-hi.json
     def create_stack(params)
-      if stack_exists?
-        puts "Cannot create a stack because the #{@stack_name} already exists."
+      if stack_exists?(@stack_name)
+        puts "Cannot create '#{@stack_name}' stack because it already exists."
         return
       end
 
       template_body = IO.read(@template_path)
-      message = "#{@stack_name} stack creating."
+      message = "Creating #{@stack_name} stack."
       if @options[:noop]
         message = "NOOP #{message}"
       else
