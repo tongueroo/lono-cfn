@@ -19,7 +19,7 @@ module LonoCfn
         message = "NOOP #{message}"
       else
         preview_changes if @options[:preview]
-        are_you_sure?
+        are_you_sure?(:update)
 
         if @options[:change_set] # defaults to this
           message << " via change set: #{plan.change_set_name}"
@@ -59,20 +59,6 @@ module LonoCfn
 
     def change_set_update
       plan.execute_change_set
-    end
-
-    def are_you_sure?
-      if @options[:sure]
-        sure = 'y'
-      else
-        puts "Are you sure you want to want to update the stack with the changes? (y/N)"
-        sure = $stdin.gets
-      end
-
-      unless sure =~ /^y/
-        puts "Exiting without updating"
-        exit 0
-      end
     end
   end
 end

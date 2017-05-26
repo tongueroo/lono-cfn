@@ -1,6 +1,7 @@
 module LonoCfn
   class Delete
     include AwsServices
+    include Util
 
     def initialize(stack_name, options={})
       @stack_name = stack_name
@@ -13,6 +14,8 @@ module LonoCfn
       if @options[:noop]
         puts "NOOP #{message}"
       else
+        are_you_sure?(:delete)
+
         if stack_exist?(@stack_name)
           cfn.delete_stack(stack_name: @stack_name)
           puts message

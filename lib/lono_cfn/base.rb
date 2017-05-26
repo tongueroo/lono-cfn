@@ -4,6 +4,7 @@ require "lono-params"
 module LonoCfn
   class Base
     include AwsServices
+    include Util
 
     def initialize(stack_name, options={})
       @stack_name = stack_name

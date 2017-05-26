@@ -31,6 +31,7 @@ module LonoCfn
 
     desc "delete STACK", "delete a CloudFormation stack"
     long_desc Help.delete
+    option :sure, type: :boolean, desc: "Skips are you sure prompt"
     def delete(name)
       Delete.new(name, options).run
     end
