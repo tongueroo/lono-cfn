@@ -7,7 +7,7 @@ Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](h
 ```bash
 $ lono-cfn create my-stack-$(date +%s) --template my-template --params my-params
 $ lono-cfn update my-stack-1493859659 --template my-template --params my-params
-$ lono-cfn delete my-stack-1493859659
+$ lono-cfn delete my-stack-1493859659 --sure
 $ lono-cfn plan my-stack-1493859659 --template template-name --params params-name
 ```
 
@@ -146,5 +146,3 @@ $ git submodule update --init
 
 * [lono](https://github.com/tongueroo/lono) - Lono is a CloudFormation Template generator.  Lono generates CloudFormation templates based on ERB ruby templates.
 * [lono-params](https://github.com/tongueroo/lono-params) - Tool to generate a CloudFormation parameters json formatted file from a simplier env like file.
-
-ith
