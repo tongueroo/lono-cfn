@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project *tries* to adhere to [Semantic Versioning](http://semver.org/), even before v1.0.
 
+## [1.0.2]
+
+- fix delete stack command
+
 ## [1.0.1]
 
 - update vendored lono-params 0.1.1
