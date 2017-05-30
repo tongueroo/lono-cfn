@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/tongueroo/lono-cfn.svg?style=svg)](https://circleci.com/gh/tongueroo/lono-cfn)
 
-Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](https://github.com/tongueroo/lono) and [lono-params](https://github.com/tongueroo/lono-params) files.  Example:
+Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](https://github.com/tongueroo/lono) and [lono-params](https://github.com/tongueroo/lono-params) files.  Examples:
 
 ```bash
 $ lono-cfn create my-stack-$(date +%s) --template my-template --params my-params
@@ -17,7 +17,16 @@ The above command:
 2. Generate a parameters file from the `params/my-params.txt`.
 3. Launch the CloudFormation stack with those parameters.
 
-This tool is meant to be used in conjuction with [lono](https://github.com/tongueroo/lono) but can also be used separately with the `--no-lono` flag, which skips the `lono generate` step.
+This tool is meant to be used in conjuction with [lono](https://github.com/tongueroo/lono) but can also be used separately with the `--no-lono` flag, which skips the lono generation steps.
+
+These blog posts cover both lono and lono-cfn:
+
+* [Why Generate CloudFormation Templates with Lono](https://medium.com/boltops/why-generate-cloudformation-templates-with-lono-65b8ea5eb87d)
+* [Generating CloudFormation Templates with Lono](https://medium.com/boltops/generating-cloudformation-templates-with-lono-4709afa1299b)
+* [AutoScaling CloudFormation Template with Lono](https://medium.com/boltops/autoscaling-cloudformation-template-with-lono-3dc520480c5f)
+* [CloudFormation Tools: lono, lono-params and lono-cfn Together
+](https://medium.com/boltops/cloudformation-tools-lono-lono-params-and-lono-cfn-play-together-620af51e616)
+* [AWS CloudFormation dry-run with lono-cfn plan](https://medium.com/boltops/aws-cloudformation-dry-run-with-lono-cfn-plan-2a1e0f80d13c)
 
 ## Installation
 
