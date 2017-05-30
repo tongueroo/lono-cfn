@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lono-cfn (1.0.2)
+    lono-cfn (1.0.3)
       aws-sdk
       colorize
       hashie
@@ -20,13 +20,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    aws-sdk (2.9.24)
-      aws-sdk-resources (= 2.9.24)
-    aws-sdk-core (2.9.24)
+    aws-sdk (2.9.25)
+      aws-sdk-resources (= 2.9.25)
+    aws-sdk-core (2.9.25)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.9.24)
-      aws-sdk-core (= 2.9.24)
+    aws-sdk-resources (2.9.25)
+      aws-sdk-core (= 2.9.25)
     aws-sigv4 (1.0.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -74,7 +74,7 @@ GEM
       thor
     lumberjack (1.0.12)
     method_source (0.8.2)
-    minitest (5.10.2)
+    minitest (5.10.1)
     nenv (0.3.0)
     notiffany (0.1.1)
       nenv (~> 0.1)
@@ -131,4 +131,4 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   1.14.6
+   1.15.0
