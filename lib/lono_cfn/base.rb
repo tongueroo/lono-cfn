@@ -22,7 +22,7 @@ module LonoCfn
     def run
       generate_templates if @options[:lono]
       check_for_errors
-      params = generate_params
+      params = generate_params if @options[:lono]
       save_stack(params) # defined in the sub class
     end
 
