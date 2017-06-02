@@ -1,5 +1,5 @@
 module LonoCfn
-  class CLI < Thor
+  class CLI < Command
     class Help
       class << self
         def create

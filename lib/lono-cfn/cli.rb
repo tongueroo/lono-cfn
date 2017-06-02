@@ -3,7 +3,7 @@ require "lono-cfn/cli/help"
 
 module LonoCfn
 
-  class CLI < Thor
+  class CLI < Command
     class_option :verbose, type: :boolean
     class_option :noop, type: :boolean
     class_option :project_root, desc: "Project folder.  Defaults to current directory", default: "."

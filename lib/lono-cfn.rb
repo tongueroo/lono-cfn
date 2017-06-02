@@ -8,6 +8,7 @@ $:.unshift(File.expand_path("../../vendor/lono-params/lib", __FILE__))
 require "lono-params"
 
 module LonoCfn
+  autoload :Command, 'lono-cfn/command'
   autoload :AwsServices, 'lono-cfn/aws_services'
   autoload :Util, 'lono-cfn/util'
   autoload :CLI, 'lono-cfn/cli'
