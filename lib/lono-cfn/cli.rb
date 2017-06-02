@@ -1,5 +1,5 @@
 require "thor"
-require "lono_cfn/cli/help"
+require "lono-cfn/cli/help"
 
 module LonoCfn
 

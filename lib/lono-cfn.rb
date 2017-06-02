@@ -1,5 +1,5 @@
 $:.unshift(File.expand_path("../", __FILE__))
-require "lono_cfn/version"
+require "lono-cfn/version"
 
 require "colorize"
 
@@ -8,12 +8,12 @@ $:.unshift(File.expand_path("../../vendor/lono-params/lib", __FILE__))
 require "lono-params"
 
 module LonoCfn
-  autoload :AwsServices, 'lono_cfn/aws_services'
-  autoload :Util, 'lono_cfn/util'
-  autoload :CLI, 'lono_cfn/cli'
-  autoload :Base, 'lono_cfn/base'
-  autoload :Create, 'lono_cfn/create'
-  autoload :Update, 'lono_cfn/update'
-  autoload :Delete, 'lono_cfn/delete'
-  autoload :Plan, 'lono_cfn/plan'
+  autoload :AwsServices, 'lono-cfn/aws_services'
+  autoload :Util, 'lono-cfn/util'
+  autoload :CLI, 'lono-cfn/cli'
+  autoload :Base, 'lono-cfn/base'
+  autoload :Create, 'lono-cfn/create'
+  autoload :Update, 'lono-cfn/update'
+  autoload :Delete, 'lono-cfn/delete'
+  autoload :Plan, 'lono-cfn/plan'
 end
