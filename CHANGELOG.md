@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project *tries* to adhere to [Semantic Versioning](http://semver.org/), even before v1.0.
 
+## [1.1.0]
+
+- add lono-cfn diff
+- rename lono-cfn preview
+
 ## [1.0.4]
 
 - rename lono_cfn -> lono-cfn
