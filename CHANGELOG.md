@@ -22,7 +22,7 @@ This project *tries* to adhere to [Semantic Versioning](http://semver.org/), eve
 
 ## [1.0.0]
 
-- add lono-cfn plan
+- add lono-cfn preview
 - fix edge cases and show helpful error messages when stacks are not in updatable statuses
 
 ## [0.0.8]

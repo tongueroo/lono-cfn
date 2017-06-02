@@ -18,11 +18,12 @@ module LonoCfn
       if @options[:noop]
         message = "NOOP #{message}"
       else
-        preview_changes if @options[:preview]
+        diff.run if @options[:diff]
+        preview.run if @options[:preview]
         are_you_sure?(:update)
 
         if @options[:change_set] # defaults to this
-          message << " via change set: #{plan.change_set_name}"
+          message << " via change set: #{preview.change_set_name}"
           change_set_update
         else
           standard_update(params)
@@ -46,19 +47,17 @@ module LonoCfn
       end
     end
 
-    def plan
-      return @plan if @plan
-      @plan = Plan.new(@stack_name, @options.merge(lono: false, mute_params: true))
-      @plan.setup
-      @plan
+    def preview
+      options = @options.merge(lono: false, mute_params: true, mute_using: true, keep: true)
+      @preview ||= Preview.new(@stack_name, options)
     end
 
-    def preview_changes
-      plan.preview_change_set
+    def diff
+      @diff ||= Diff.new(@stack_name, @options.merge(lono: false, mute_params: true, mute_using: true))
     end
 
     def change_set_update
-      plan.execute_change_set
+      preview.execute_change_set
     end
   end
 end

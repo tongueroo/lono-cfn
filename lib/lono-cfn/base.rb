@@ -15,15 +15,19 @@ module LonoCfn
       params_name = options[:params] || template_name
       @template_path = get_source_path(template_name, :template)
       @params_path = get_source_path(params_name, :params)
-      puts "Using template: #{@template_path}"
-      puts "Using parameters: #{@params_path}"
+      puts "Using template: #{@template_path}" unless @options[:mute_using]
+      puts "Using parameters: #{@params_path}" unless @options[:mute_using]
     end
 
     def run
+      params = generate_all
+      save_stack(params) # defined in the sub class
+    end
+
+    def generate_all
       generate_templates if @options[:lono]
       check_for_errors
-      params = generate_params if @options[:lono]
-      save_stack(params) # defined in the sub class
+      generate_params(mute: @options[:mute_params])
     end
 
     def generate_templates

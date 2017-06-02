@@ -66,19 +66,29 @@ The above command will delete my-stack.
 EOL
         end
 
-        def plan
+        def preview
 <<-EOL
-Generates a CloudFormation plan.  This is similar to a `terraform plan` or puppet's dry-run mode.
+Generates a CloudFormation preview.  This is similar to a `terraform plan` or puppet's dry-run mode.
 
 Example output:
 
-CloudFormation plan for 'example' stack update. Changes:
+CloudFormation preview for 'example' stack update. Changes:
 
 Remove AWS::Route53::RecordSet: DnsRecord testsubdomain.sub.tongueroo.com
 
 Examples:
 
-$ lono-cfn plan my-stack
+$ lono-cfn preview my-stack
+EOL
+        end
+
+        def diff
+<<-EOL
+Displays code diff of the generated CloudFormation template locally vs the existing template on AWS. You can set a desired diff viewer by setting the LONO_CFN_DIFF environment variable.
+
+Examples:
+
+$ lono-cfn diff my-stack
 EOL
         end
       end

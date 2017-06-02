@@ -23,7 +23,8 @@ module LonoCfn
     desc "update STACK", "update a CloudFormation stack"
     long_desc Help.update
     option :change_set, type: :boolean, default: true, desc: "Uses generated change set to update the stack.  If false, will perform normal update-stack."
-    option :preview, type: :boolean, default: true, desc: "Prints preview of the stack changes before continuing."
+    option :diff, type: :boolean, default: true, desc: "Show diff of the source code template changes before continuing."
+    option :preview, type: :boolean, default: true, desc: "Show preview of the stack changes before continuing."
     option :sure, type: :boolean, desc: "Skips are you sure prompt"
     def update(name)
       Update.new(name, options).run
@@ -36,11 +37,19 @@ module LonoCfn
       Delete.new(name, options).run
     end
 
-    desc "plan STACK", "preview a CloudFormation stack update"
-    long_desc Help.plan
+    desc "preview STACK", "preview a CloudFormation stack update"
+    long_desc Help.preview
     option :keep, type: :boolean, desc: "keep the changeset instead of deleting it afterwards"
-    def plan(name)
-      Plan.new(name, options).run
+    option :diff, type: :boolean, default: true, desc: "Show diff of the source code template changes also."
+    def preview(name)
+      Diff.new(name, options).run if options[:diff]
+      Preview.new(name, options).run
+    end
+
+    desc "diff STACK", "diff of newly generated template vs existing template in AWS"
+    long_desc Help.diff
+    def diff(name)
+      Diff.new(name, options).run
     end
   end
 end
