@@ -11,24 +11,29 @@ describe LonoCfn::CLI do
   end
 
   describe "lono-cfn" do
-    it "creates stack" do
+    it "create stack" do
       out = execute("bin/lono-cfn create my-stack #{@args}")
       expect(out).to include("Creating")
     end
 
-    it "updates stack" do
+    it "update stack" do
       out = execute("bin/lono-cfn update my-stack #{@args}")
       expect(out).to include("Updating")
     end
 
-    it "deletes stack" do
+    it "delete stack" do
       out = execute("bin/lono-cfn delete my-stack #{@args}")
       expect(out).to include("Deleted")
     end
 
-    it "plans stack" do
-      out = execute("bin/lono-cfn plan my-stack #{@args}")
-      expect(out).to include("CloudFormation plan")
+    it "preview stack" do
+      out = execute("bin/lono-cfn preview my-stack #{@args}")
+      expect(out).to include("CloudFormation preview")
+    end
+
+    it "diff stack" do
+      out = execute("bin/lono-cfn diff my-stack #{@args}")
+      expect(out).to include("diff")
     end
   end
 end

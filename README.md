@@ -8,7 +8,7 @@ Wrapper cfn tool to quickly create CloudFormation stacks from [lono templates](h
 $ lono-cfn create my-stack-$(date +%s) --template my-template --params my-params
 $ lono-cfn update my-stack-1493859659 --template my-template --params my-params
 $ lono-cfn delete my-stack-1493859659 --sure
-$ lono-cfn plan my-stack-1493859659 --template template-name --params params-name
+$ lono-cfn preview my-stack-1493859659 --template template-name --params params-name
 ```
 
 The above command:
@@ -26,7 +26,7 @@ These blog posts cover both lono and lono-cfn:
 * [AutoScaling CloudFormation Template with Lono](https://medium.com/boltops/autoscaling-cloudformation-template-with-lono-3dc520480c5f)
 * [CloudFormation Tools: lono, lono-params and lono-cfn Together
 ](https://medium.com/boltops/cloudformation-tools-lono-lono-params-and-lono-cfn-play-together-620af51e616)
-* [AWS CloudFormation dry-run with lono-cfn plan](https://medium.com/boltops/aws-cloudformation-dry-run-with-lono-cfn-plan-2a1e0f80d13c)
+* [AWS CloudFormation dry-run with lono-cfn preview](https://medium.com/boltops/aws-cloudformation-dry-run-with-lono-cfn-preview-2a1e0f80d13c)
 
 ## Installation
 
@@ -117,19 +117,19 @@ $ lono-cfn update my-stack --template template-name --params params-name --sure
 $ lono-cfn delete my-stack --sure
 ```
 
-### lono-cfn plan
+### lono-cfn preview
 
-If you want to see the CloudFormation plan without updating the stack you can also use the `lono-cfn plan` command.
+If you want to see the CloudFormation preview without updating the stack you can also use the `lono-cfn preview` command.
 
 ```
-$ lono-cfn plan example --template single_instance --params single_instance
+$ lono-cfn preview example --template single_instance --params single_instance
 Using template: output/single_instance.yml
 Using parameters: params/single_instance.txt
 Generating CloudFormation templates:
   ./output/single_instance.yml
 Params file generated for example at ./output/params/example.json
-Generating CloudFormation Change Set for plan.....
-CloudFormation plan for 'example' stack update. Changes:
+Generating CloudFormation Change Set for preview.....
+CloudFormation preview for 'example' stack update. Changes:
 Remove AWS::Route53::RecordSet: DnsRecord testsubdomain.sub.tongueroo.com
 $
 ```

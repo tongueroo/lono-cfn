@@ -1,32 +1,25 @@
 module LonoCfn
   # Inherit from Base because the initializer is the same
-  class Plan < Base
+  class Preview < Base
     include AwsServices
 
-    def setup
-      generate_templates if @options[:lono]
-      check_for_errors
-      @params = generate_params(mute: @options[:mute_params])
-    end
-
-    # Override run from Base superclass, the run method is different enough with Plan
+    # Override run from Base superclass, the run method is different enough with Preview
     def run
-      setup
-
       if @options[:noop]
-        puts "NOOP CloudFormation plan for #{@stack_name} update"
+        puts "NOOP CloudFormation preview for #{@stack_name} update"
       else
-        preview_change_set
+        params = generate_all
+        preview_change_set(params)
         delete_change_set unless @options[:keep] # Clean up and delete the change set
       end
     end
 
-    def preview_change_set
-      create_change_set
+    def preview_change_set(params)
+      create_change_set(params)
       display_change_set
     end
 
-    def create_change_set
+    def create_change_set(params)
       unless stack_exists?(@stack_name)
         puts "Cannot create a change set for the stack because the #{@stack_name} does not exists."
         return
@@ -34,26 +27,26 @@ module LonoCfn
       exist_unless_updatable(stack_status(@stack_name))
 
       template_body = IO.read(@template_path)
-      begin
+      # begin
         cfn.create_change_set(
           change_set_name: change_set_name,
           stack_name: @stack_name,
           template_body: template_body,
-          parameters: @params
+          parameters: params
         )
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        if e.message =~ /^Parameters: /
-          puts "Error creating CloudFormation plan because invalid CloudFormation parameters. Full error message:".colorize(:red)
-          puts e.message
-          quit(1)
-        else
-          raise
-        end
-      end
+      # rescue Aws::CloudFormation::Errors::ValidationError => e
+      #   if e.message =~ /^Parameters: /
+      #     puts "Error creating CloudFormation preview because invalid CloudFormation parameters. Full error message:".colorize(:red)
+      #     puts e.message
+      #     quit(1)
+      #   else
+      #     raise
+      #   end
+      # end
     end
 
     def display_change_set
-      print "Generating CloudFormation Change Set for plan.."
+      print "Generating CloudFormation Change Set for preview.."
       change_set = describe_change_set
       until change_set_finished?(change_set) do
         change_set = describe_change_set
@@ -64,12 +57,12 @@ module LonoCfn
 
       case change_set.status
       when "CREATE_COMPLETE"
-        puts "CloudFormation plan for '#{@stack_name}' stack update. Changes:"
+        puts "CloudFormation preview for '#{@stack_name}' stack update. Changes:"
         change_set.changes.each do |change|
           display_change(change)
         end
       when "FAILED"
-        puts "Fail to create a CloudFormation plan for '#{@stack_name}' stack update. Reason:".colorize(:red)
+        puts "Fail to create a CloudFormation preview for '#{@stack_name}' stack update. Reason:".colorize(:red)
         puts change_set.status_reason
         quit(1)
       else

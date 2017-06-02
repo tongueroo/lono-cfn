@@ -16,5 +16,6 @@ module LonoCfn
   autoload :Create, 'lono-cfn/create'
   autoload :Update, 'lono-cfn/update'
   autoload :Delete, 'lono-cfn/delete'
-  autoload :Plan, 'lono-cfn/plan'
+  autoload :Preview, 'lono-cfn/preview'
+  autoload :Diff, 'lono-cfn/diff'
 end
