@@ -1,7 +1,7 @@
 module LonoCfn
   class Delete
-    include AwsServices
-    include Util
+    include Lono::Cfn::AwsServices
+    include Lono::Cfn::Util
 
     def initialize(stack_name, options={})
       @stack_name = stack_name
